@@ -30,3 +30,16 @@ class InvalidCredential(ExmailException):
 class ApiError(ExmailException):
     """Call api error."""
     name = 'Api error'
+
+
+class ParamsError(ExmailException):
+    """Params error."""
+    name = 'Params error'
+
+    def __init__(self, message):
+        self._message = message
+
+    def __str__(self):
+        return '{name}({message})'.format(
+                name=self.name,
+                message=self._message)

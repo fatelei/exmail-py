@@ -15,6 +15,8 @@ setup(
         where='.',
         exclude=('tests',)
     ),
-    install_requires=[],
+    install_requires=[
+        'urllib3'
+    ],
     test_requires=[],
 )
