@@ -132,13 +132,13 @@ class DepartmentApi(ExmailClient):
             return []
 
         body = {
-            'access_token': self.access_token,
             'name': name,
             'fuzzy': fuzzy
         }
 
         data = self.transport.perform_request(
-            api='/department/search',
+            method='POST',
+            api='/department/search?access_token=%s' % self.access_token,
             body=body
         )
         return data['department']

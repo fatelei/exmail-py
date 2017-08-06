@@ -18,5 +18,6 @@ setup(
     install_requires=[
         'urllib3'
     ],
-    test_requires=[],
+    test_require=['pytest'],
+    setup_requires=['pytest-runner']
 )
