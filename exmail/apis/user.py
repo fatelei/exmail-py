@@ -51,7 +51,7 @@ class UserApi(ExmailClient):
         if len(slaves) > 5:
             raise exceptions.ParamsError('Slaves must be within 5')
 
-        if not isinstance(slaves, tuple):
+        if slaves and not isinstance(slaves, tuple):
             raise exceptions.ParamsError('slaves should be tuple type')
 
         body = {
@@ -104,13 +104,13 @@ class UserApi(ExmailClient):
         if len(department) > 20:
             raise exceptions.ParamsError('Departments must be within 20')
         
-        if not isinstance(department, tuple):
+        if department and not isinstance(department, tuple):
             raise exceptions.ParamsError('department should be tuple type')
 
         if len(slaves) > 5:
             raise exceptions.ParamsError('Slaves must be within 5')
 
-        if not isinstance(slaves, tuple):
+        if slaves and not isinstance(slaves, tuple):
             raise exceptions.ParamsError('slaves should be tuple type')
 
         body = {
