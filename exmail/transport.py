@@ -56,8 +56,12 @@ class Transport(object):
         elif 400 <= status < 500:
             raise exceptions.ApiError(status, data)
 
-        data = json.loads(data.decode('utf8'))
-        errcode, errmsg = data.pop('errcode'), data.pop('errmsg')
+        try:
+            data = json.loads(data.decode('utf8'))
+        except AttributeError:  # py3
+            data = json.loads(data)
+
+        errcode, errmsg = data.pop('errcode', 0), data.pop('errmsg', '')
         if errcode != 0:
             raise exceptions.ApiError(errcode, errmsg)
         logging.debug('Call api {} return ({}, {})'.format(

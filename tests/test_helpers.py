@@ -10,6 +10,7 @@ Unittest for helpers.
 import pytest
 
 from exmail import helpers
+from exmail.exceptions import ParamsError
 
 
 class TestHelpers(object):
@@ -18,7 +19,7 @@ class TestHelpers(object):
     def test_required_params(self):
         """Test for required_params decorator."""
 
-        @helpers.required_params
+        @helpers.required_params()
         def foo1(a=None):
             pass
         foo1()
@@ -26,11 +27,11 @@ class TestHelpers(object):
         @helpers.required_params('a')
         def foo2(a=None):
             pass
-        foo2()
+        foo2(a=None)
 
         @helpers.required_params('b')
         def foo3(a=None):
             pass
 
-        with pytest.raises(Exception):
+        with pytest.raises(ParamsError):
             foo3()

@@ -1,3 +1,8 @@
 .vscode
 *.pyc
 __pycache__
+.tox
+exmail.egg-info
+.coverage
+.eggs
+.cache

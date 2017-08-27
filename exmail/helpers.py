@@ -2,6 +2,8 @@
 
 import functools
 
+from exmail.exceptions import ParamsError
+
 
 def required_params(*required):
     """Check required params."""
@@ -12,7 +14,7 @@ def required_params(*required):
             if not (set(required) - keys):
                 return func(*args, **kwargs)
             else:
-                raise Exception('required params are {}, but params passed are {}'.format(
+                raise ParamsError('required params are {}, but params passed are {}'.format(
                     required, kwargs
                 ))
         return inner
