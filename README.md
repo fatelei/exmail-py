@@ -8,8 +8,10 @@ Exmail python client library.
 - Group Apis (邮件组管理 API)
 - SSO Apis (单点登录 API)
 
+
 # TODO
 
-- Log Apis (邮件日志 API)
-- Settings Apis (邮箱设置 API)
-- New Email Notfication Apis (新邮件提醒 API)
+- [] docs
+- [] Log Apis (邮件日志 API)
+- [] Settings Apis (邮箱设置 API)
+- [] New Email Notfication Apis (新邮件提醒 API)
