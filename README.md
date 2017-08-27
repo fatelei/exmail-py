@@ -1,4 +1,4 @@
-# exmail-py
+# exmail-py ![ci](https://travis-ci.org/fatelei/exmail-py.svg?branch=master)
 Exmail python client library.
 
 # APIs
