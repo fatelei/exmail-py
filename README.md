@@ -11,7 +11,7 @@ Exmail python client library.
 
 # TODO
 
-- [] docs
-- [] Log Apis (邮件日志 API)
-- [] Settings Apis (邮箱设置 API)
-- [] New Email Notfication Apis (新邮件提醒 API)
+- [ ] docs
+- [ ] Log Apis (邮件日志 API)
+- [ ] Settings Apis (邮箱设置 API)
+- [ ] New Email Notfication Apis (新邮件提醒 API)
